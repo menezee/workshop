@@ -11,7 +11,7 @@ class App extends Component {
               <Header/>
               <BrowserRouter>
                   <Switch>
-                      <Route path='/customers' component={Customers} />
+                      <Route path='/customers' render={props => <Customers {...props} customers={['Gap', 'Latam']} />} />
                       <Route path='/projects' component={Projects} />
                   </Switch>
               </BrowserRouter>
