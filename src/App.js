@@ -1,11 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import { Header } from './components';
+import Projects from './containers/Projects'
 
 class App extends Component {
   render() {
     return (
-      <div>
-          My first react app
-      </div>
+        <Fragment>
+          <Header />
+          <Projects greeting='olar' />
+        </Fragment>
     );
   }
 }
