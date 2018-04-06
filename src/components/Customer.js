@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const style = {
     border: '1px solid black',
@@ -8,6 +9,9 @@ const style = {
 
 export const Customer = props => (
     <div style={style}>
-        { props.name }
+        <Link to={{pathname: '/projects', state: { project: props.name }}} >
+            { props.name }
+        </Link>
+
     </div>
 )

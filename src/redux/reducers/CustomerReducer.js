@@ -1,8 +1,14 @@
-import { SET_LOADING, SET_CAPTCHA_ANSWERED, SET_ECOM_USER } from '../types'
+import { ADD_CUSTOMER } from '../types'
 
 export const INITIAL_STATE = {
-    isLoading: false,
-    captchaAnswered: false,
-    isEcomUser: false
+    customers: ['Globo']
 }
 
+export default (state = INITIAL_STATE, action) => {
+    switch (action.type) {
+        case ADD_CUSTOMER:
+            return {...state, customers: [...state.customers, action.payload]}
+        default:
+            return state
+    }
+}
